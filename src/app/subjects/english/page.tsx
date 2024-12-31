@@ -58,7 +58,7 @@ const EnglishPage = () => {
             Practice Verbs!
           </button>
           <button
-            onClick={() => navigateToLevel('gender')}
+            onClick={() => navigateToLevel('../gender')}
             className="bg-pink-500 text-white font-semibold py-3 rounded-lg shadow-md hover:bg-pink-600 transition duration-200"
           >
             Understand Gender!
