@@ -163,30 +163,34 @@ const GenderLearningGame = ({ onNavigateBack }) => {
           <div className="grid grid-cols-2 gap-8">
             <div>
               <h2 className="text-xl font-bold text-blue-600 mb-4 text-center">Masculine</h2>
-              {shuffledPairs.masculine.map((pair, idx) => (
-                <button
-                  key={`m-${idx}`}
-                  onClick={() => handleMatchingClick(pair.masculine, 'masculine', idx)}
-                  disabled={matchedPairs.has(idx)}
-                  className={`w-full p-4 rounded-lg text-lg font-semibold bg-blue-100 text-blue-800 hover:bg-blue-200 ${
-                    matchedPairs.has(idx) ? 'opacity-50 cursor-not-allowed' : ''
-                  }`}
-                >
-                  {pair.masculine}
-                </button>
-              ))}
+              <div className="space-y-4">
+                {shuffledPairs.masculine.map((pair, idx) => (
+                  <button
+                    key={`m-${idx}`}
+                    onClick={() => handleMatchingClick(pair.masculine, 'masculine', idx)}
+                    disabled={matchedPairs.has(idx)}
+                    className={`w-full p-4 rounded-lg text-lg font-semibold bg-blue-100 text-blue-800 hover:bg-blue-200 ${
+                      matchedPairs.has(idx) ? 'opacity-50 cursor-not-allowed' : ''
+                    }`}
+                  >
+                    {pair.masculine}
+                  </button>
+                ))}
+              </div>
             </div>
             <div>
               <h2 className="text-xl font-bold text-pink-600 mb-4 text-center">Feminine</h2>
-              {shuffledPairs.feminine.map((word, idx) => (
-                <button
-                  key={`f-${idx}`}
-                  onClick={() => handleMatchingClick(word, 'feminine', idx)}
-                  className={`w-full p-4 rounded-lg text-lg font-semibold bg-pink-100 text-pink-800 hover:bg-pink-200`}
-                >
-                  {word}
-                </button>
-              ))}
+              <div className="space-y-4">
+                {shuffledPairs.feminine.map((word, idx) => (
+                  <button
+                    key={`f-${idx}`}
+                    onClick={() => handleMatchingClick(word, 'feminine', idx)}
+                    className={`w-full p-4 rounded-lg text-lg font-semibold bg-pink-100 text-pink-800 hover:bg-pink-200`}
+                  >
+                    {word}
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
         )}
