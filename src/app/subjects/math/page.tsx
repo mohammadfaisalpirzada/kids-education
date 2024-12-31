@@ -62,25 +62,25 @@ const MathPage = () => {
         {/* Buttons for various Math levels */}
         <div className="flex flex-col space-y-4">
           <button
-            onClick={() => navigateToLevel('match_numbers')}
+            onClick={() => navigateToLevel('../match_numbers')}
             className="bg-pink-500 text-white font-semibold py-3 rounded-lg shadow-md hover:bg-pink-600 transition duration-200"
           >
             Match the Numbers!
           </button>
           <button
-            onClick={() => navigateToLevel('missing_number')}
+            onClick={() => navigateToLevel('../missing_number')}
             className="bg-blue-500 text-white font-semibold py-3 rounded-lg shadow-md hover:bg-blue-600 transition duration-200"
           >
             Find the Missing Number!
           </button>
           <button
-            onClick={() => navigateToLevel('counts_10')}
+            onClick={() => navigateToLevel('../counts_10')}
             className="bg-green-500 text-white font-semibold py-3 rounded-lg shadow-md hover:bg-green-600 transition duration-200"
           >
             Counts of 10s
           </button>
           <button
-            onClick={() => navigateToLevel('tables')}
+            onClick={() => navigateToLevel('../tables')}
             className="bg-orange-500 text-white font-semibold py-3 rounded-lg shadow-md hover:bg-orange-600 transition duration-200"
           >
             Tables
